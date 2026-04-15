@@ -55,15 +55,15 @@
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
+            color: #333333; 
+            transition: color 0.3s ease-in-out; /* la velocidad de la animación */
         }
-        .nav-links li.active { color: #d31224; } /* Color rojo institucional */
-        .nav-links li:not(.active) { color: #333333; }
-        .menu-icon {
-            font-size: 24px;
-            color: #333;
-            margin-left: 20px;
-            cursor: pointer;
+        
+        /* El color rojo se aplica cuando pasas el mouse */
+        .nav-links li.active, .nav-links li:hover { 
+            color: #d31224; 
         }
+  
 
         /* --- SECCIÓN PRINCIPAL (HERO) --- */
 /* --- SECCIÓN PRINCIPAL (HERO) --- */
@@ -138,8 +138,8 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .lang-selector img {
-            width: 20px;
-            height: 15px;
+            width: 25px;
+            height: 20px;
         }
     </style>
 </head>
@@ -159,16 +159,17 @@
     <div class="logo-container">
         <img class="logo-image" srcset="https://redictus.org/images/logo/redictus-logo.jpg 1x, https://redictus.org/images/logo/redictus-logo.jpg 2x" src="https://redictus.org/images/logo/redictus-logo.jpg" height="60" alt="Red ICTUS México">
     </div>
-    <ul class="nav-links">
-        <li class="active">Red ICTUS México</li>
-        <li>Nosotros</li>
-        <li>Servicios</li>
-        <li>Qué nos mueve</li>
-        <li>Donaciones</li>
-        <li>Eventos</li>
-        <li>Contacto</li>
-        <li><i class="fas fa-bars menu-icon"></i></li>
-    </ul>
+        <ul class="nav-links">
+            <li class="active" onclick="window.location.href='index.html'">Red ICTUS México</li>
+            <li>Nosotros</li>
+            <li>Servicios</li>
+            <li>Qué nos mueve</li>
+            <li>Donaciones</li>
+            <li>Eventos</li>
+            <li onclick="window.location.href='tienda.html'">Tienda</li>
+            <li>Contacto</li>
+            <li><i class="fas fa-bars menu-icon"></i></li>
+        </ul>
 </nav>
 
     <section class="hero">

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - Red Ictus México</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* --- BARRA SUPERIOR OSCURA --- */
+        .top-bar {
+            background-color: #3b3b3b;
+            color: #d1d1d1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 40px;
+            font-size: 12px;
+        }
+        .top-bar .social-icons i { margin-right: 15px; cursor: pointer; }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        .navbar {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .logo-container img { height: 60px; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 25px;
+        }
+        .nav-links li {
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #333333;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        /* Animación y color rojo solicitado */
+        .nav-links li.active, .nav-links li:hover { 
+            color: #d31224; 
+        }
+
+        /* --- CONTENIDO DE LA TIENDA --- */
+         .store-container {
+            padding: 50px;
+            text-align: center;
+            background-color: #f8f9fa;
+            min-height: 80vh;
+        }
+        .store-header { margin-bottom: 40px; }
+        .placeholder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas del mismo tamaño */
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="contact-email">
+            <i class="far fa-envelope"></i> contacto@redictus.org
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="logo-image" src="https://redictus.org/images/logo/redictus-logo.jpg" alt="Red ICTUS México">
+        </div>
+        <ul class="nav-links">
+            <li class="active" onclick="window.location.href='index.html'">Red ICTUS México</li>
+            <li>Nosotros</li>
+            <li>Servicios</li>
+            <li>Qué nos mueve</li>
+            <li>Donaciones</li>
+            <li>Eventos</li>
+            <li onclick="window.location.href='tienda.html'">Tienda</li>
+            <li>Contacto</li>
+            <li><i class="fas fa-bars"></i></li>
+        </ul>
+    </nav>
+
+    <div class="store-container">
+        <div class="store-header">
+            <h1>Tienda Oficial</h1>
+            <p>Apoyanos con una donación "Tu donación puede cambiar una vida".</p>
+        </div>
+
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <h3>Brain Buddy Plush</h3>
+                <p>$300.00 MXN</p>
+                <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <h3>Mochila RED ICTUS</h3>
+                <p>$300.00 MXN</p>
+                <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <h3>Termo RED ICTUS</h3>
+                <p>$300.00 MXN</p>
+                <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Comprar</button>
+            </div>
+
+            <div class="product-card">
+                <h3>Pulsera RED ICTUS   </h3>
+                <p>$300.00 MXN</p>
+                <button style="margin-top:10px; padding:5px 10px; cursor:pointer;">Comprar</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
